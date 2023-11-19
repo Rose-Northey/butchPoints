@@ -23,6 +23,7 @@ function Form (){
   };
 
   return (
+    <div className= 'vflex'>
     <form onSubmit={handleSubmit}>
       <div className= 'RHS'>
       <div>
@@ -60,6 +61,7 @@ function Form (){
 
       <button type="submit">Submit</button>
     </form>
+    </div>
   );
 };
 

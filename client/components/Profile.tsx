@@ -23,7 +23,7 @@ export default function Profile() {
     <h3>Points</h3>
     <p>{imageIndex}</p>
     <img src = {images[imageIndex]}/>
-    <button onClick = {handleClick}>
+    <button className='pointButton' onClick = {handleClick}>
       Award Point
     </button>
   </div>
