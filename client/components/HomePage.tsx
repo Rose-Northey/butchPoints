@@ -1,24 +1,20 @@
-import { useState, useEffect } from "react"
+import { useState} from "react"
+import Profile from "./Profile"
+import Form from "./Form"
 export default function HomePage() {
-
-  const images = [
-    './public/femme.PNG',
-    './public/plaid.jpg',
-    './public/pixie.PNG',
-    './public/hench.PNG',
-  ];
-
-
 
 
 
 
   return (
   <>
-  <h3>hey</h3>
-  <button >
-    Award Point
-  </button>
+  <div className= 'hflex'>
+    <Profile />
+    <div className= 'reverse'>
+      <Profile />
+    </div>
+  </div>
+  <Form />
   </>
   )
 }

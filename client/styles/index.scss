@@ -12,7 +12,7 @@ body {
 }
 
 header{
-  padding: 2rem;
+  text-align: center;
   background-image: url('../public/plaid.jpg');
   background-position: center;
   background-size: cover;
@@ -24,17 +24,40 @@ article {
   flex: 1;
   padding: 2rem;
   text-align: center;
-  margin-top: auto; /* Add this line */
+  margin-top: auto; 
 }
 
-/* ... Your other styles ... */
+.RHS{
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+form{
+  max-width: 60%;
+  padding: 5%;
+}
+
+.vflex{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hflex{
+  display: flex;
+}
+
+.reverse img{
+  transform: scaleX(-1);
+} 
 
 footer {
-  padding: 1rem;
   display: flex;
   align-items: center;
   background-color: rgb(21, 100, 71);
-  margin-top: auto; /* Add this line */
+  margin-top: auto; 
+  padding: 0 1rem;
   color: white;
 }
 
@@ -47,5 +70,21 @@ h2, h3, p{
 }
 
 header h1{
-  color: white;
+  color: rgb(216, 202, 202);
+}
+
+img{
+  width: 80%;
+  max-width: 800px;
+  padding: 0.5rem;
+}
+
+button{
+  background-color: rgb(216, 202, 202);
+  max-width: 100px;
+  font-family: arima;
+}
+
+.points p{
+  margin: -1rem;
 }
