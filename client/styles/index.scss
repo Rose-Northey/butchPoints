@@ -12,12 +12,22 @@ body {
 }
 
 header{
-  text-align: center;
   background-image: url('../public/plaid.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  display: flex;
+  justify-content: space-between;
 
+}
+header div{
+  text-align: center;
+}
+
+header button{
+  margin:1rem;
+  height: 3rem;
+  width: 4rem;
 }
 
 article {
@@ -35,7 +45,8 @@ article {
 
 form{
   max-width: 60%;
-  padding: 5%;
+  margin: 3%;
+  padding:0.5%
 }
 
 .vflex{
@@ -74,17 +85,32 @@ header h1{
 }
 
 img{
-  width: 80%;
+  width: 40%;
   max-width: 800px;
   padding: 0.5rem;
 }
 
 button{
-  background-color: rgb(216, 202, 202);
+  background-color: rgb(47, 89, 117);
   max-width: 100px;
   font-family: arima;
+  color: rgb(216, 202, 202);
+  padding: 0.5rem;
+}
+
+button:hover{
+  color:rgb(47, 89, 117);
+  background-color: rgb(174, 173, 206)
 }
 
 .points p{
   margin: -1rem;
+}
+
+form div{
+  margin: 0.5rem;
+}
+
+form{
+  border:solid rgb(47, 89, 117) 1px
 }
