@@ -1,4 +1,4 @@
-import { Outlet } from 'react-router-dom'
+import { Outlet, Link} from 'react-router-dom'
 
 function Layout() {
   
@@ -9,7 +9,11 @@ function Layout() {
       <div>
       <h1> Butch Of The Day ♡</h1>
       </div>
-      <button>Log</button>
+      <nav>
+        <button><Link to='/log' >Points</Link></button>
+        <button><Link to='/' >Home</Link></button>
+        <button><Link to='/' >Log In</Link></button>
+      </nav>
       </header>
       <article>
         <div className = 'under-header'>
@@ -17,7 +21,7 @@ function Layout() {
         </div>
       </article>
       <footer>
-        <p>footer</p>
+        <p>Brought to you by problematic queer steriotypes.</p>
       </footer>
    </>
   )

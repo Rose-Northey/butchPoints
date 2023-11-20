@@ -7,6 +7,6 @@ import Log from './components/Log.tsx'
 export const routes = createRoutesFromElements(
   <Route element={<Layout />}>
     <Route index element={<HomePage />} />
-    <Route path="log/:id" element={<Log />} />
+    <Route path="log" element={<Log />} />
   </Route>
 )

@@ -18,6 +18,7 @@ header{
   background-repeat: no-repeat;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
 }
 header div{
@@ -82,6 +83,7 @@ h2, h3, p{
 
 header h1{
   color: rgb(216, 202, 202);
+  margin-left: 2rem;
 }
 
 img{
@@ -113,4 +115,58 @@ form div{
 
 form{
   border:solid rgb(47, 89, 117) 1px
+}
+
+table{
+  width:60%;
+  border: 1pt white solid;
+  border-collapse: collapse;
+  margin: 1rem;
+}
+
+td{
+  border: 1pt white solid;
+}
+
+table img{
+    width:60%;
+    max-width: 800px;
+    padding: 0.5rem;
+}
+
+table p{
+  margin:0.5rem;
+}
+
+.sort{
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.sort button{
+  margin:0.5rem;
+  background-color: darkolivegreen;
+}
+
+.sort button:hover{
+  margin:0.5rem;
+  background-color: rgb(180, 202, 141);
+}
+
+a:visited{
+color: white;
+}
+
+.actions{
+  justify-content: space-between;
+}
+.actions p{
+  font-size: 0.7rem;
+  padding:0 2rem;
+  margin:0;
+}
+
+.actions{
+  background-color: rgba(255, 255, 255, 0.5);
 }
