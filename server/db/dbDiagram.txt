@@ -1,0 +1,26 @@
+Table profiles {
+  id integer [primary key]
+  bp_remaining integer
+  bp_total integer
+  name string
+  butch_of_the_day boolean
+  person urlstring
+  hair urlstring
+  skin_decoration urlstring
+  top urlstring
+  earring urlstring
+  necklace urlstring
+  eyes urlstring
+}
+
+Table logs {
+  id integer [primary key]
+  title string
+  image urlstring
+  date Date
+}
+
+Table logs_profiles{
+  log_id integer
+  profile_id integer
+}
