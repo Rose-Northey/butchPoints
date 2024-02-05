@@ -26,8 +26,17 @@ header div{
 
 header button{
   margin:0.5rem;
-  height: 3rem;
+  padding:0.5rem;
+  height: 4rem;
   max-width: 6rem;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center;
+}
+
+button p{
+  margin:0;
 }
 
 article {

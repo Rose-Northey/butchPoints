@@ -4,11 +4,7 @@ import {useAuth0} from '@auth0/auth0-react'
 
 export default function Nav() {
 
-  const {logout, loginWithRedirect} = useAuth0()
-  const user = {
-    nickname: 'john.doe',
-  }
-  console.log(useAuth0())
+  const {user, logout, loginWithRedirect} = useAuth0()
 
   const handleSignOut=()=>{
     logout()
@@ -25,13 +21,14 @@ export default function Nav() {
   <nav className= 'hflex'>
     <IfAuthenticated>
       <button onClick={handleSignOut}>
-        Log Out
+        {user && <p>{user?.nickname}</p>}
+        <p>Log Out</p>
       </button>
-      {user && <p>Signed in as: {user?.nickname}</p>}
+      
     </IfAuthenticated>
     <IfNotAuthenticated>
       <button onClick={handleSignIn}>
-        Log In
+        <p>Log In</p>
       </button>
     </IfNotAuthenticated>
 
