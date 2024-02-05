@@ -1,4 +1,5 @@
 import { Outlet } from 'react-router-dom'
+import Nav from './Nav'
 
 function Layout() {
   
@@ -9,7 +10,7 @@ function Layout() {
       <div>
       <h1> Butch Of The Day ♡</h1>
       </div>
-      <button>Log</button>
+      <Nav />
       </header>
       <article>
         <div className = 'under-header'>

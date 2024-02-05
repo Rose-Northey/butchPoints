@@ -25,9 +25,9 @@ header div{
 }
 
 header button{
-  margin:1rem;
+  margin:0.5rem;
   height: 3rem;
-  width: 4rem;
+  max-width: 6rem;
 }
 
 article {
@@ -92,7 +92,7 @@ img{
 
 button{
   background-color: rgb(47, 89, 117);
-  max-width: 100px;
+  max-width: 200px;
   font-family: arima;
   color: rgb(216, 202, 202);
   padding: 0.5rem;
