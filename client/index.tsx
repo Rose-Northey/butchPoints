@@ -11,10 +11,13 @@ const router = createBrowserRouter(routes)
 document.addEventListener('DOMContentLoaded', () => {
   createRoot(document.getElementById('app') as HTMLElement).render(
     <Auth0Provider
-      domain="roa-2021-rose.au.auth0.com"
+      domain="roa-2023-rose.au.auth0.com"
       clientId="RFORpHUwDPOBi7fUHfrAKeZJLuMiia3s"
-      redirectUri={window.location.origin}
-      audience="https://butchpoints/api"
+      // audience="https://butchpoints/api"
+      authorizationParams={{
+        redirect_uri: window.location.origin,
+      }}
+      
     >
       <QueryClientProvider client={queryClient}>
         <ReactQueryDevtools />
