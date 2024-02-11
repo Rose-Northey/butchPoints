@@ -26,12 +26,14 @@
     ]
   },
   "dependencies": {
+    "auth0": "^4.3.0",
     "express": "^4.17.2",
     "knex": "^2.5.1",
     "sqlite3": "^5.1.6",
     "superagent": "7.1.1"
   },
   "devDependencies": {
+    "@auth0/auth0-react": "^2.2.4",
     "@devacademy/eslint-config": "^1.9.1",
     "@redux-devtools/extension": "^3.2.3",
     "@tanstack/eslint-plugin-query": "^4.29.9",
