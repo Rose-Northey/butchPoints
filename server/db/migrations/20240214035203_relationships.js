@@ -9,11 +9,11 @@ export function up(knex) {
     table.string('top_name')
     table.integer('top_points')
     table.string('top_access_token')
-    table.string('top_email_address')
+    table.string('top_email')
     table.string('bottom_name')
     table.integer('bottom_points')
     table.string('bottom_access_token')
-    table.string('bottom_email_address')
+    table.string('bottom_email')
   })
 };
 
