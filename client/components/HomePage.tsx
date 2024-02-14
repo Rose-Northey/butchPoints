@@ -1,15 +1,14 @@
-import RequestBox from "./RequestBox"
-import {useAuth0} from "@auth0/auth0-react"
+import RequestBox from './RequestBox'
+import { useAuth0 } from '@auth0/auth0-react'
 
 export default function HomePage() {
-
-  const {isAuthenticated}= useAuth0()
+  const { isAuthenticated } = useAuth0()
 
   return (
-  <>
-
-
-    <RequestBox />
-  </>
+    <>
+      <div className={isAuthenticated?"":"hidden"}>
+        <RequestBox />
+      </div>
+    </>
   )
 }
