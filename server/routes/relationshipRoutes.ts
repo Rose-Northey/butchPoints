@@ -4,7 +4,7 @@ import * as db from '../db/dbRelationships'
 const router = Router()
 
 
-// /api/v1/reslationships
+// /api/v1/relationships
 router.get('/', async (req, res) => {
   try {
     const userEmail = req.body
