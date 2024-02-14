@@ -5,7 +5,6 @@ import {useAuth0} from '@auth0/auth0-react'
 export default function Nav() {
 
   const {user, logout, loginWithRedirect} = useAuth0()
-  console.log(useAuth0())
   const firstName= user?.given_name
   const lastName= user?.family_name
   const emailAddress= user?.email
@@ -18,6 +17,7 @@ export default function Nav() {
     loginWithRedirect()
   }
 
+  
   // const handleAdd = async(fruit: FruitData) => {
   //   const token = await getAccessTokenSilently()
   //   console.log(token)
