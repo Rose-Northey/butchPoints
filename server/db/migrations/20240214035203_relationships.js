@@ -1,0 +1,25 @@
+/**
+ * @param { import("knex").Knex } knex
+ * @returns { Promise<void> }
+ */
+export async function up(knex) {
+  await knex.schema.createTable('profiles',()=>{
+    table.increments('id').primary()
+    table.string('status')
+    table.string('top_name')
+    table.integer('top_points')
+    table.string('top_access_token')
+    table.string('bottom_name')
+    table.integer('bottom_points')
+    table.string('bottom_access_token')
+    table.string('bottom_email_address')
+  })
+};
+
+/**
+ * @param { import("knex").Knex } knex
+ * @returns { Promise<void> }
+ */
+export async function down(knex){
+  await knex.schema.dropTable('relationships')
+};
