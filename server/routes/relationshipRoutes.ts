@@ -5,7 +5,7 @@ const router = Router()
 
 
 // /api/v1/relationships
-router.get('/', async (req, res) => {
+router.post('/', async (req, res) => {
   try {
     const userEmail = req.body.bottomEmail
     const requests = await db.getRequestsByBottomEmail(userEmail)
