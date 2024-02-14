@@ -1,17 +1,15 @@
-import { useState} from "react"
-import Profile from "./Profile"
-import Form from "./Form"
-import PointsLog from "./PointsLog"
-import { addProfile } from "../apis/profile"
+import RequestBox from "./RequestBox"
+import {useAuth0} from "@auth0/auth0-react"
+
 export default function HomePage() {
-  addProfile()
+
+  const {isAuthenticated}= useAuth0()
 
   return (
   <>
-  <div className= 'hflex'>
-  <h2>This app excludes single people.</h2>
-  <h3>This app is the online version of a wine and cheese night. Single people don't get butch points.</h3>
-  </div>
+
+
+    <RequestBox />
   </>
   )
 }
