@@ -6,7 +6,6 @@ export async function getRequestsByBottomEmail(bottomEmail:string){
     const requests = await connection('relationships')
       .where('bottom_email', bottomEmail)
       .select('*')
-      .first()
     return requests
   }catch(error){
     console.error('error adding artwork to db', error)
