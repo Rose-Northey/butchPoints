@@ -1,16 +1,16 @@
 import { Router } from 'express'
 
-import * as db from '../db/dbProfiles'
+import * as db from '../db/dbRelationships'
 
 const router = Router()
 
 
-// /api/v1/profiles/newUser
-router.post('/newUser', async (req, res) => {
+// /api/v1/relationships/new
+router.post('/new', async (req, res) => {
   try {
-    const newProfile = req.body
-    const newUserId = await db.addProfile(newProfile)
-    res.status(200).json(newUserId)
+    const newRelationship = req.body
+    const newRelationshipId = await db.addRelationship(newRelationship)
+    res.status(200).json(newRelationshipId)
   } catch (error) {
     console.error('error at server router', error)
   }

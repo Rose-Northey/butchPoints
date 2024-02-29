@@ -1,7 +1,7 @@
 import connection from "./connection"
 import { NewRelationship } from "../../models/modelsRelationships"
 
-export async function addRelationShip(newRelationship:NewRelationship, db = connection){
+export async function addRelationship(newRelationship:NewRelationship, db = connection){
   try{
     const newRelationshipId = db('relationships').insert({
       bottom_email_address: newRelationship.bottomEmail,
