@@ -1,5 +1,4 @@
 import { Router } from 'express'
-
 import * as db from '../db/dbRelationships'
 
 const router = Router()

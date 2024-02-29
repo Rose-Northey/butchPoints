@@ -1,8 +1,8 @@
 import express from 'express'
 import * as Path from 'node:path'
-
 import profileRoutes from './routes/profileRoutes.ts'
-import relationshipRoutes from './routes/relationshipRoutes.ts'
+import relationshipRoutes from './routes/relationshipRoutes'
+
 
 const server = express()
 
