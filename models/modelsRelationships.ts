@@ -1,6 +1,6 @@
 export interface NewRelationship {
-  topName: string
-  topAccessToken: string
+  topName: string | undefined
+  topAccessToken: string | undefined
   bottomEmail:string
-  topEmail:string
+  topEmail:string | undefined
 }
