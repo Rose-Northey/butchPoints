@@ -1,13 +1,19 @@
 import connection from "./connection"
-import { NewProfile } from "../../models/modelsProfiles"
+import { NewRelationship } from "../../models/modelsRelationships"
 
-export async function getRequestsByBottomEmail(bottomEmail:string){
+export async function addRelationship(newRelationship:NewRelationship, db = connection){
   try{
-    const requests = await connection('relationships')
-      .where('bottom_email', bottomEmail)
-      .select('*')
-    return requests
+    const newRelationshipId = db('relationships').insert({
+      bottom_email: newRelationship.bottomEmail,
+      top_email: newRelationship.topEmail,
+      top_name: newRelationship.topName,
+      top_access_token: newRelationship.topAccessToken,
+      status: "pending",
+      top_points: 1,
+      bottom_points: 0
+    })
+    return newRelationshipId
   }catch(error){
-    console.error('error adding artwork to db', error)
+    console.error('error adding new relationship', error)
   }
 }

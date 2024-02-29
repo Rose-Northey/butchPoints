@@ -4,15 +4,14 @@ import * as db from '../db/dbRelationships'
 const router = Router()
 
 
-// /api/v1/relationships
-router.post('/', async (req, res) => {
+// /api/v1/relationships/new
+router.post('/new', async (req, res) => {
   try {
-    const userEmail = req.body.bottomEmail
-    const requests = await db.getRequestsByBottomEmail(userEmail)
-    console.log(userEmail)
-    res.status(200).json(requests)
+    const newRelationship = req.body
+    const newRelationshipId = await db.addRelationship(newRelationship)
+    res.status(200).json(newRelationshipId)
   } catch (error) {
-    console.error('could not get requests at server router', error)
+    console.error('error at server router', error)
   }
 })
 

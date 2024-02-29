@@ -2,8 +2,8 @@
  * @param { import("knex").Knex } knex
  * @returns { Promise<void> }
  */
-export function up(knex) {
-  return knex.schema.createTable('relationships',function(table){
+export async function up(knex) {
+  await knex.schema.createTable('relationships',(table)=>{
     table.increments('id').primary()
     table.string('status')
     table.string('top_name')
