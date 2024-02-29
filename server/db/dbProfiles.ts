@@ -9,7 +9,7 @@ export async function addProfile(newProfile:NewProfile, db = connection){
     user_token: newProfile.userToken,
     first_name: newProfile.firstName,
     last_name: newProfile.lastName,
-    email_address: newProfile.emailAddress
+    email_address: newProfile.emailAddress 
     })
     return newProfileID;
   }catch(error){
