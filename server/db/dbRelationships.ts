@@ -4,7 +4,8 @@ import { NewRelationship } from "../../models/modelsRelationships"
 export async function addRelationship(newRelationship:NewRelationship, db = connection){
   try{
     const newRelationshipId = db('relationships').insert({
-      bottom_email_address: newRelationship.bottomEmail,
+      bottom_email: newRelationship.bottomEmail,
+      top_email: newRelationship.topEmail,
       top_name: newRelationship.topName,
       top_access_token: newRelationship.topAccessToken,
       status: "pending",
