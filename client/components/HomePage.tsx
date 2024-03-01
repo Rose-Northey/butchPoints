@@ -6,12 +6,11 @@ import * as api from '../apis/relationships'
 export default function HomePage() {
 
   const { isAuthenticated, user } = useAuth0()
-  console.log(user?.email)
 
   return (
     <>
       <div className={isAuthenticated?"":"hidden"}>
-        {/* <OutgoingRequestsForm /> */}
+        <OutgoingRequestsForm />
         <RequestBox />
       </div>
     </>

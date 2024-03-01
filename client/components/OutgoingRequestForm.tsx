@@ -5,23 +5,23 @@ import * as apis from '../apis/relationships'
 export default function OutgoingRequestsForm() {
   const [email, setEmail] = useState<string>('')
   
-  // const queryClient = useQueryClient()
+  const queryClient = useQueryClient()
 
-  // const submitRequestMutation = useMutation({
-  //   mutationFn: apis.submitRequest,
-  //   onSuccess: async()=>{
-  //     setEmail('')
-  //   }
-  // })
+  const submitRequestMutation = useMutation({
+    mutationFn: apis.submitRequest,
+    onSuccess: async()=>{
+      setEmail('')
+    }
+  })
 
-  // const submitRequest = async(event:React.FormEvent<Element>)=>{
-  //   event.preventDefault()
-  //   try{
-  //     console.log("you've run a function!")
-  //   }catch(error){
-  //     console.error('could not submit your request for some reason')
-  //   }
-  // }
+  const submitRequest = async(event:React.FormEvent<Element>)=>{
+    event.preventDefault()
+    try{
+      console.log("you've run a function!")
+    }catch(error){
+      console.error('could not submit your request for some reason')
+    }
+  }
 
   const handleEmailChange = (event: React.ChangeEvent<HTMLInputElement>)=>{
     setEmail(event.target.value)
