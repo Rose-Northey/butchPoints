@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useMutation, useQueryClient } from '@tanstack/react-query'
 import * as apis from '../apis/relationships'
+import {NewRelationship} from './'
 
 export default function OutgoingRequestsForm() {
   const [email, setEmail] = useState<string>('')
@@ -14,10 +15,23 @@ export default function OutgoingRequestsForm() {
     }
   })
 
+  // export interface NewRelationship {
+  //   topName: string | undefined
+  //   topAccessToken: string | undefined
+  //   bottomEmail:string
+  //   topEmail:string | undefined
+  // }
+
   const submitRequest = async(event:React.FormEvent<Element>)=>{
     event.preventDefault()
+    const newRelationship: NewRelationship = {
+      topName: "topName",
+      topAccessToken: "topAccessToken",
+      topEmail: "topemail@gmail.com",
+      bottomEmail: email
+    }
     try{
-      console.log("you've run a function!")
+      submitRequestMutation.mutate(newRelationship)
     }catch(error){
       console.error('could not submit your request for some reason')
     }
