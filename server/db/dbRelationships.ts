@@ -1,5 +1,5 @@
 import connection from "./connection"
-import { NewRelationship } from "../../models/modelsRelationships"
+import { NewRelationship, IncomingRequests } from "../../models/modelsRelationships"
 
 export async function addRelationship(newRelationship:NewRelationship, db = connection){
   try{
@@ -15,5 +15,11 @@ export async function addRelationship(newRelationship:NewRelationship, db = conn
     return newRelationshipId
   }catch(error){
     console.error('error adding new relationship', error)
+  }
+}
+
+export async function displayIncomingRequests(userEmail:string, db=connection):IncomingRequests{
+  try{
+    const incomingRequests = db('relationships').where('bottom_email', userEmail).select('*').first()
   }
 }
