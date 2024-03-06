@@ -6,7 +6,7 @@ import { useAuth0 } from '@auth0/auth0-react'
 
 export default function OutgoingRequestsForm() {
   const [email, setEmail] = useState<string>('')
-  const {user} = useAuth0()
+  const {user, getAccessTokenSilently} = useAuth0()
   const queryClient = useQueryClient()
 
   const submitRequestMutation = useMutation({
@@ -20,7 +20,7 @@ export default function OutgoingRequestsForm() {
     event.preventDefault()
     const newRelationship: NewRelationship = {
       topName: user?.given_name,
-      topAccessToken: "topAccessToken",
+      topAccessToken: await getAccessTokenSilently(),
       topEmail: user?.email,
       bottomEmail: email
     }
