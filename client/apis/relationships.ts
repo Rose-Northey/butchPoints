@@ -6,5 +6,6 @@ import { NewRelationship } from '../../models/modelsRelationships'
 
 export async function submitRequest(newRelationship:NewRelationship){
   const requests = await request.post('/api/v1/relationships/new').send(newRelationship)
+  console.log('submitRequestApi', newRelationship)
   return requests.body
 }

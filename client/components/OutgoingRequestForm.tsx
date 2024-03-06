@@ -23,6 +23,7 @@ export default function OutgoingRequestsForm() {
       topEmail: "topemail@gmail.com",
       bottomEmail: email
     }
+    console.log(submitRequest)
     try{
       submitRequestMutation.mutate(newRelationship)
     }catch(error){
@@ -48,7 +49,7 @@ export default function OutgoingRequestsForm() {
           />
         </label>
         <br />
-        <button type="submit" onClick={console.log("heeey")}>
+        <button type="submit" onClick={submitRequest}>
           GRAND ROMANTIC GESTURE AWAY!!
         </button>
       </form>
