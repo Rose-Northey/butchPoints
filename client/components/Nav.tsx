@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import { IfAuthenticated, IfNotAuthenticated } from "./ArchiveComponents/Authenticated"
+import { IfAuthenticated, IfNotAuthenticated } from "./Authenticated"
 import {useAuth0} from '@auth0/auth0-react'
 
 export default function Nav() {
