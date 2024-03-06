@@ -2,10 +2,11 @@ import React, { useState } from 'react'
 import { useMutation, useQueryClient } from '@tanstack/react-query'
 import * as apis from '../apis/relationships'
 import {NewRelationship} from '../../models/modelsRelationships'
+import { useAuth0 } from '@auth0/auth0-react'
 
 export default function OutgoingRequestsForm() {
   const [email, setEmail] = useState<string>('')
-  
+  const {user} = useAuth0()
   const queryClient = useQueryClient()
 
   const submitRequestMutation = useMutation({
@@ -18,9 +19,9 @@ export default function OutgoingRequestsForm() {
   const submitRequest = async(event:React.FormEvent<Element>)=>{
     event.preventDefault()
     const newRelationship: NewRelationship = {
-      topName: "topName",
+      topName: user?.given_name,
       topAccessToken: "topAccessToken",
-      topEmail: "topemail@gmail.com",
+      topEmail: user?.email,
       bottomEmail: email
     }
     console.log(submitRequest)
