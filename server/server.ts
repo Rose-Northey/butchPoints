@@ -1,6 +1,5 @@
 import express from 'express'
 import * as Path from 'node:path'
-import profileRoutes from './routes/profileRoutes.ts'
 import relationshipRoutes from './routes/relationshipRoutes'
 
 
@@ -8,7 +7,6 @@ const server = express()
 
 server.use(express.json())
 
-server.use('/api/v1/profiles', profileRoutes)
 server.use('/api/v1/relationships', relationshipRoutes)
 
 if (process.env.NODE_ENV === 'production') {
