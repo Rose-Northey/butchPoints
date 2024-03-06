@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useMutation, useQueryClient } from '@tanstack/react-query'
 import * as apis from '../apis/relationships'
-import {NewRelationship} from './'
+import {NewRelationship} from '../../models/modelsRelationships'
 
 export default function OutgoingRequestsForm() {
   const [email, setEmail] = useState<string>('')
@@ -14,13 +14,6 @@ export default function OutgoingRequestsForm() {
       setEmail('')
     }
   })
-
-  // export interface NewRelationship {
-  //   topName: string | undefined
-  //   topAccessToken: string | undefined
-  //   bottomEmail:string
-  //   topEmail:string | undefined
-  // }
 
   const submitRequest = async(event:React.FormEvent<Element>)=>{
     event.preventDefault()

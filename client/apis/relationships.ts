@@ -4,18 +4,7 @@ import { NewRelationship } from '../../models/modelsRelationships'
 
 
 
-export async function submitRequest(bottomEmail:string){
-const {user, getAccessTokenSilently} = useAuth0()
-const topName= user?.given_name
-const emailAddress= user?.email
-
-  // const newRelationship:NewRelationship = {
-  //   topName: user?.given_name,
-  //   topAccessToken: getAccessTokenSilently(),
-  //   bottomEmail:bottomEmail,
-  //   topEmail:user?.email
-  // }
-
-  const requests = await request.post('/api/v1/relationships/new').send(bottomEmail)
+export async function submitRequest(newRelationship:NewRelationship){
+  const requests = await request.post('/api/v1/relationships/new').send(newRelationship)
   return requests.body
 }
